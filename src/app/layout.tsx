@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +14,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
+        <header className="py-8 bg-slate-300">
+          <div className="container px-2">
+            <nav className="flex items-center justify-between">
+              <span className="font-bold inline-block mr-4">Logo</span>
+              <div className="flex items-center gap-4">
+                <Link href="/">Главная</Link>
+                <Link href="/about">О нас</Link>
+                <Link href="/services">Услуги</Link>
+              </div>
+            </nav>
+          </div>
+        </header>
         {children}
+        <footer className="py-8 bg-slate-300">My Footer</footer>
       </body>
     </html>
   );

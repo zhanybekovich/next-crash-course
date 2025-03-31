@@ -1,7 +1,7 @@
-export default function Home() {
+export default function About() {
   return (
     <section className="py-32 px-40">
-      <h1 className="text-7xl font-bold mb-8">Главная страница</h1>
+      <h1 className="text-7xl font-bold mb-8">О нашей компании</h1>
       <p>
         Далеко-далеко за словесными горами в стране гласных и согласных живут,
         рыбные тексты. Подпоясал, курсивных своих гор прямо толку свой
