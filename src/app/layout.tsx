@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./app.css";
-import Link from "next/link";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,20 +16,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="py-8 bg-slate-300">
-          <div className="container px-2">
-            <nav className="flex items-center justify-between">
-              <span className="font-bold inline-block mr-4">Logo</span>
-              <div className="flex items-center gap-4">
-                <Link href="/">Главная</Link>
-                <Link href="/about">О нас</Link>
-                <Link href="/services">Услуги</Link>
-              </div>
-            </nav>
-          </div>
-        </header>
+        <Header />
         {children}
-        <footer className="py-8 bg-slate-300">My Footer</footer>
       </body>
     </html>
   );
